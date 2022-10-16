@@ -2,20 +2,29 @@
 
 /**
  * main - output all combination of single digits
+ * @void: parameter
  * Return: Always 0
  */
 int main(void)
 {
-	int n;
+	int i;
+	int j;
 
-	for (n = 48; n < 58; n++)
+
+	for (i = 48; i < 58; i++)
 	{
-		putchar(n);
-		if (n != 57)
+		for (j = i + 1; j < 58; j++)
 		{
-			putchar(',');
-			putchar(' ');
+		putchar(i);
+		putchar(j);
+		if (i != 56 && j != 58)
+		{
+			putchar(44);
+			putchar(32);
 		}
-	putchar('\n');
+	}
+}
+	putchar(10);
+
 	return (0);
 }
