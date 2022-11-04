@@ -31,18 +31,5 @@ int evaluate_n(int n, int i)
  */
 int is_prime_number(int n)
 {
-	int i;
-
-	i = 2
-	if (n < 2)
-	{
-	return (0);
-	}
-
-	if (n == 2)
-	{
-	return (1);
-	}
-
-	return (evaluate_n(n, i));
+	return (sqrt2(n, 1));
 }
