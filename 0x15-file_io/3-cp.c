@@ -41,6 +41,7 @@ void close_file(int fd)
 	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
 	}
 }
 /**
@@ -72,7 +73,7 @@ do {
 		dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
 		free(buffer);
-		exit(98);
+		exit(98); 
 	}
 
 	w = write(to, buffer, r);
@@ -95,4 +96,4 @@ close_file(to);
 
 return (0);
 
-}
+}  
